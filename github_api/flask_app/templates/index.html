@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+<!-- linking a javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/scripts.js') }}"></script>
     <title>GitHub API</title>
 </head>
 <body>
-    <button>Connect to GitHub</button>
+    <input id="apiaddress">
+    <button id="gitapi">Connect to GitHub</button>
+    <form action="/send" method="post">
+        <input type="hidden" value="place" name="username" id="hiddenname">
+        <button>Send</button>
+        <p id="username"></p>
+
+    </form>
+
+
+
 </body>
 </html>
